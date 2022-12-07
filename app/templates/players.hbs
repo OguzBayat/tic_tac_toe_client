@@ -1,0 +1,8 @@
+{{page-title 'Players'}}
+<h2>List of Players</h2>
+
+<ul>
+  {{#each @model as |player|}}
+    <li>{{player.name}} - {{player.sign}}</li>
+  {{/each}}
+</ul>
