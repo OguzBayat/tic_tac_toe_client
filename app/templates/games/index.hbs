@@ -1,0 +1,9 @@
+<div class='container'>
+  <h2>List of Games</h2>
+
+  <ul>
+    {{#each @model as |game|}}
+      <li>{{game.id}} - {{game.turn}}</li>
+    {{/each}}
+  </ul>
+</div>
