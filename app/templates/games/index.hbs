@@ -1,9 +1,12 @@
 <div class='container'>
   <h2>List of Games</h2>
 
-  <ul>
+  <ul class='list-group list-group-flush'>
     {{#each @model as |game|}}
-      <li>{{game.id}} - {{game.turn}}</li>
+      <li class='list-group-item'><LinkTo
+          @route='games.show'
+          @model='{{game.id}}'
+        >Game{{game.id}}</LinkTo></li>
     {{/each}}
   </ul>
 </div>
