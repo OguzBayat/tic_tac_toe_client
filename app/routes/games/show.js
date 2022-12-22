@@ -7,10 +7,4 @@ export default class GamesShowRoute extends Route {
   model(params) {
     return this.store.findRecord('game', params.id);
   }
-
-  setupController(controller, model) {
-    console.log(' model ', model.turn);
-    controller.setProperties(model);
-    console.log('cont ', controller.isExpanded);
-  }
 }
