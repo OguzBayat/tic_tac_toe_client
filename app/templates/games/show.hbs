@@ -57,3 +57,10 @@
 
 <button class='btn btn-rounded' type='button' {{action this.returnHome}}>Back to
   Home</button>
+{{#unless @model.winner_id}}
+  <button
+    class='btn btn-rounded'
+    type='button'
+    {{action this.restartGame}}
+  >Restart This Game</button>
+{{/unless}}
