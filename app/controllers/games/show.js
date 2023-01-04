@@ -37,11 +37,14 @@ export default class GamesShowController extends Controller {
   }
 
   addGame() {
-    let game = this.store.createRecord('game', {
+    let newGame = this.store.createRecord('game', {
       winner_id: null,
       move_count: 0,
       turn: 'X',
     });
-    game.save();
+    console.log(newGame.id);
+    newGame.save();
+    console.log(newGame.id);
+    this.transitionToRoute('games.index');
   }
 }
